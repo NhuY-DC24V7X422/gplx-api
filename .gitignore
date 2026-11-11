@@ -1,0 +1,25 @@
+# thư viện & build
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# log, hệ điều hành, IDE
+*.log
+logs/
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# biến môi trường (chứa bí mật)
+.env
+.env.*
+!.env.example
+
+# GPLX
+uploads/
+data/raw/*
+!data/raw/.gitkeep
+data/work/
