@@ -32,6 +32,7 @@ src/
 ├── main.ts, setup-app.ts   khởi động, cấu hình chung (prefix /api/v1, helmet, CORS, validation, Swagger)
 ├── config/                 đọc và kiểm tra biến môi trường
 ├── common/                 lỗi chuẩn, bộ lọc lỗi, định dạng response { data, meta }
+├── domain/                 logic thuần (không dùng database): ngày giờ VN, bỏ dấu, SM-2, tính tiến độ, chấm bài thi
 └── modules/                health (các module khác sẽ thêm dần)
 ```
 
