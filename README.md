@@ -24,6 +24,8 @@ Tài liệu API (Swagger): http://localhost:3000/api/docs
 | `npm test` | Unit test |
 | `npm run test:e2e` | Test e2e |
 | `npm run lint` | Kiểm tra và tự sửa định dạng code |
+| `npm run data:validate` | Kiểm tra dữ liệu câu hỏi trong `data/src` |
+| `npm run data:build` | Tạo gói dữ liệu `data/out/catalog_v1.json` (xem `data/README.md`) |
 
 ## Cấu trúc
 
@@ -34,6 +36,8 @@ src/
 ├── common/                 lỗi chuẩn, bộ lọc lỗi, định dạng response { data, meta }
 ├── domain/                 logic thuần (không dùng database): ngày giờ VN, bỏ dấu, SM-2, tính tiến độ, chấm bài thi
 └── modules/                health (các module khác sẽ thêm dần)
+data/                       dữ liệu câu hỏi mẫu và script tạo gói dữ liệu
+test/vectors/               các ca test dùng chung với app Flutter (cùng đầu vào thì 2 bên phải ra cùng kết quả)
 ```
 
 ## Quy ước response

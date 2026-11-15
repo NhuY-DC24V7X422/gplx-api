@@ -1,0 +1,8 @@
+[
+  { "code": "RULES", "name": "Khái niệm và quy tắc giao thông đường bộ", "order": 1 },
+  { "code": "CULTURE", "name": "Văn hóa giao thông, đạo đức người lái xe", "order": 2 },
+  { "code": "DRIVING", "name": "Kỹ thuật lái xe", "order": 3 },
+  { "code": "MECHANICS", "name": "Cấu tạo và sửa chữa", "order": 4 },
+  { "code": "SIGNS", "name": "Báo hiệu đường bộ", "order": 5 },
+  { "code": "SITUATION", "name": "Sa hình và kỹ năng xử lý tình huống", "order": 6 }
+]

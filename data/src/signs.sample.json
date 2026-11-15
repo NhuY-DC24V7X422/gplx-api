@@ -1,0 +1,13 @@
+[
+  { "code": "P.101", "name": "Đường cấm", "group": "PROHIBITION", "image": "s_P.101.png", "description": "Cấm tất cả các loại phương tiện đi lại cả hai hướng, trừ các xe được ưu tiên theo quy định." },
+  { "code": "P.102", "name": "Cấm đi ngược chiều", "group": "PROHIBITION", "image": "s_P.102.png", "description": "Cấm các loại xe đi vào theo chiều đặt biển, trừ các xe được ưu tiên theo quy định." },
+  { "code": "P.123a", "name": "Cấm rẽ trái", "group": "PROHIBITION", "image": "s_P.123a.png", "description": "Cấm các loại xe rẽ trái tại nơi đặt biển." },
+  { "code": "P.127", "name": "Tốc độ tối đa cho phép", "group": "PROHIBITION", "image": "s_P.127.png", "description": "Cấm các loại xe chạy với tốc độ vượt quá trị số ghi trên biển." },
+  { "code": "P.130", "name": "Cấm dừng xe và đỗ xe", "group": "PROHIBITION", "image": "s_P.130.png", "description": "Cấm dừng và đỗ xe ở phía đường có đặt biển, trừ các xe được ưu tiên theo quy định." },
+  { "code": "P.131a", "name": "Cấm đỗ xe", "group": "PROHIBITION", "image": "s_P.131a.png", "description": "Cấm đỗ xe ở phía đường có đặt biển, trừ các xe được ưu tiên theo quy định." },
+  { "code": "W.201a", "name": "Chỗ ngoặt nguy hiểm vòng bên trái", "group": "DANGER", "image": "s_W.201a.png", "description": "Báo trước sắp đến chỗ ngoặt nguy hiểm vòng bên trái; người lái xe phải giảm tốc độ." },
+  { "code": "W.224", "name": "Đường người đi bộ cắt ngang", "group": "DANGER", "image": "s_W.224.png", "description": "Báo trước sắp đến phần đường dành cho người đi bộ sang ngang; phải giảm tốc độ, nhường đường." },
+  { "code": "R.302a", "name": "Hướng phải đi vòng chướng ngại vật (sang phải)", "group": "MANDATORY", "image": "s_R.302a.png", "description": "Các xe chỉ được đi theo hướng mũi tên chỉ." },
+  { "code": "R.303", "name": "Nơi giao nhau chạy theo vòng xuyến", "group": "MANDATORY", "image": "s_R.303.png", "description": "Các loại xe phải chạy vòng theo chiều mũi tên tại nơi giao nhau." },
+  { "code": "I.401", "name": "Bắt đầu đường ưu tiên", "group": "INDICATION", "image": "s_I.401.png", "description": "Báo hiệu bắt đầu đoạn đường ưu tiên; các xe đi trên đường này được quyền ưu tiên qua nơi giao nhau." }
+]
