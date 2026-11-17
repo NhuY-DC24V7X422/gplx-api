@@ -6,7 +6,9 @@ import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 import { EnvelopeInterceptor } from './common/interceptors/envelope.interceptor';
 import configuration from './config/configuration';
 import { envValidation } from './config/validation';
+import { CatalogModule } from './modules/catalog/catalog.module';
 import { HealthController } from './modules/health/health.controller';
+import { SyncModule } from './modules/sync/sync.module';
 
 @Module({
   imports: [
@@ -21,8 +23,12 @@ import { HealthController } from './modules/health/health.controller';
       inject: [ConfigService],
       useFactory: (config: ConfigService) => ({
         uri: config.get<string>('app.mongodbUri'),
+        dbName: config.get<string>('app.dbName'), // URI Atlas không có tên DB nên truyền riêng
+        serverSelectionTimeoutMS: 10000, // 10 giây không kết nối được thì báo lỗi, không treo mãi
       }),
     }),
+    CatalogModule,
+    SyncModule,
   ],
   controllers: [HealthController],
   providers: [

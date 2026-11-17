@@ -8,6 +8,7 @@ export const envValidation = Joi.object({
     .default('development'),
   PORT: Joi.number().default(3000),
   MONGODB_URI: Joi.string().required(),
+  DB_NAME: Joi.string().default('gplx'),
   JWT_ACCESS_SECRET: Joi.string().min(32).required(),
   JWT_ACCESS_TTL: Joi.string().default('15m'),
   REFRESH_TTL_DAYS: Joi.number().integer().min(1).default(30),

@@ -2,6 +2,7 @@ export interface AppConfig {
   env: string;
   port: number;
   mongodbUri: string;
+  dbName: string;
   jwtAccessSecret: string;
   jwtAccessTtl: string;
   refreshTtlDays: number;
@@ -15,6 +16,7 @@ export default (): { app: AppConfig } => ({
     env: process.env.NODE_ENV ?? 'development',
     port: Number(process.env.PORT ?? 3000),
     mongodbUri: process.env.MONGODB_URI!,
+    dbName: process.env.DB_NAME ?? 'gplx',
     jwtAccessSecret: process.env.JWT_ACCESS_SECRET!,
     jwtAccessTtl: process.env.JWT_ACCESS_TTL ?? '15m',
     refreshTtlDays: Number(process.env.REFRESH_TTL_DAYS ?? 30),
