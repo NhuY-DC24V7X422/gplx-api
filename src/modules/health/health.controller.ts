@@ -1,10 +1,12 @@
 import { Controller, Get } from '@nestjs/common';
 import { InjectConnection } from '@nestjs/mongoose';
 import { ApiTags } from '@nestjs/swagger';
+import { Public } from '../../common/decorators';
 import { Connection } from 'mongoose';
 
 // GET /api/v1/health: kiểm tra server còn sống và có nối được MongoDB không.
 @ApiTags('health')
+@Public() // không cần đăng nhập
 @Controller('health')
 export class HealthController {
   constructor(@InjectConnection() private readonly conn: Connection) {}

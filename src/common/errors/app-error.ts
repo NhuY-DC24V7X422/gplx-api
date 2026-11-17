@@ -27,6 +27,18 @@ export const Errors = {
       HttpStatus.UNAUTHORIZED,
       'Bạn cần đăng nhập',
     ),
+  tokenExpired: () =>
+    new AppError(
+      'TOKEN_EXPIRED',
+      HttpStatus.UNAUTHORIZED,
+      'Phiên đăng nhập đã hết hạn',
+    ),
+  accountLocked: () =>
+    new AppError(
+      'ACCOUNT_LOCKED',
+      HttpStatus.FORBIDDEN,
+      'Tài khoản đã bị khóa',
+    ),
   forbidden: () =>
     new AppError(
       'FORBIDDEN',

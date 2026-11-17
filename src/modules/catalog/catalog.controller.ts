@@ -1,5 +1,6 @@
 import { Controller, Get, Param, Query } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
+import { Public } from '../../common/decorators';
 import { Transform } from 'class-transformer';
 import {
   IsBoolean,
@@ -51,6 +52,7 @@ class PenaltiesQuery extends PaginationQuery {
 
 // API công khai, không cần đăng nhập. Chỉ trả dữ liệu đã phát hành và đang hiện.
 @ApiTags('catalog')
+@Public() // không cần đăng nhập
 @Controller()
 export class CatalogController {
   constructor(private readonly catalogService: CatalogService) {}
