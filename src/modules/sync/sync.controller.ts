@@ -10,8 +10,8 @@ class CatalogQuery {
   @IsOptional() @Type(() => Number) @IsInt() @Min(0) sinceVersion: number = 0;
 }
 
-// Đồng bộ dữ liệu cho app. Hôm nay mới có manifest + tải gói catalog,
-// push/pull tiến độ học sẽ làm ở ngày 12 (cần đăng nhập nên không gắn @Public).
+// Đồng bộ dữ liệu cho app: kiểm tra phiên bản (manifest) và tải gói câu hỏi (catalog).
+// Hai route này ai cũng gọi được nên gắn @Public.
 @ApiTags('sync')
 @Controller('sync')
 export class SyncController {

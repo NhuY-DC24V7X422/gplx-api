@@ -85,7 +85,7 @@ export class UsersService {
 
     const userId = new Types.ObjectId(id);
     await this.sessionModel.deleteMany({ userId });
-    // TODO ngày 12: xóa thêm tiến độ học, bài thi, câu đã lưu của user
+    // TODO: khi máy chủ lưu tiến độ học thì xóa thêm tiến độ, bài thi, câu đã lưu của user
     await this.userModel.deleteOne({ _id: userId });
   }
 

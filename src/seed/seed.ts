@@ -5,7 +5,7 @@
 //   npm run seed -- --file duong/dan/khac.json
 //   npm run seed -- --admin-only -> chỉ tạo admin, không nạp câu hỏi
 // Chạy nhiều lần không bị trùng vì dùng upsert (có thì cập nhật, chưa có thì thêm).
-// Ảnh tạm giữ đường dẫn "images/xxx.png" như trong gói, ngày 16 làm upload ảnh sau.
+// Ảnh giữ nguyên đường dẫn "images/xxx.png" như trong gói (chưa upload lên dịch vụ lưu ảnh).
 import { INestApplicationContext, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';

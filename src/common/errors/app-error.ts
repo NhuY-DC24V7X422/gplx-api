@@ -12,7 +12,7 @@ export class AppError extends HttpException {
   }
 }
 
-// Các lỗi hay dùng. Những ngày sau cần lỗi nào thì thêm vào đây.
+// Các lỗi hay dùng. Cần lỗi mới thì thêm vào đây.
 export const Errors = {
   validation: (details: unknown) =>
     new AppError(
@@ -39,7 +39,7 @@ export const Errors = {
       HttpStatus.FORBIDDEN,
       'Tài khoản đã bị khóa',
     ),
-  // ----- Đăng nhập / đăng ký (ngày 8) -----
+  // ----- Đăng nhập / đăng ký -----
   invalidCredentials: () =>
     new AppError(
       'INVALID_CREDENTIALS',

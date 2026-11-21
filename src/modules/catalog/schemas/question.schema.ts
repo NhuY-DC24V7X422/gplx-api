@@ -30,7 +30,7 @@ export class Question {
 
   // null = câu mới tạo, chưa phát hành lần nào -> API công khai không được trả ra
   @Prop({ type: Date, default: null, index: true }) publishedAt: Date | null;
-  // bản nháp admin đang sửa (ngày 15 mới dùng), API công khai không đọc trường này
+  // bản nháp admin đang sửa, API công khai không đọc trường này
   @Prop({ type: Object, default: null }) draft: Record<string, any> | null;
 }
 
