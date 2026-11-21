@@ -13,6 +13,9 @@ export const envValidation = Joi.object({
   JWT_ACCESS_TTL: Joi.string().default('15m'),
   REFRESH_TTL_DAYS: Joi.number().integer().min(1).default(30),
   ADMIN_ORIGIN: Joi.string().default('http://localhost:3001'),
+  // tài khoản admin đầu tiên, tạo bằng `npm run seed` (không đặt thì bỏ qua)
+  ADMIN_EMAIL: Joi.string().email().allow('').optional(),
+  ADMIN_PASSWORD: Joi.string().min(8).allow('').optional(),
   MIN_APP_VERSION: Joi.string()
     .pattern(/^\d+\.\d+\.\d+$/)
     .default('1.0.0'),

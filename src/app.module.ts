@@ -9,6 +9,7 @@ import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 import { EnvelopeInterceptor } from './common/interceptors/envelope.interceptor';
 import configuration from './config/configuration';
 import { envValidation } from './config/validation';
+import { AuthModule } from './modules/auth/auth.module';
 import { CatalogModule } from './modules/catalog/catalog.module';
 import { HealthController } from './modules/health/health.controller';
 import { SyncModule } from './modules/sync/sync.module';
@@ -40,6 +41,7 @@ import { UsersModule } from './modules/users/users.module';
         signOptions: { expiresIn: config.get<string>('app.jwtAccessTtl') },
       }),
     }),
+    AuthModule,
     UsersModule,
     CatalogModule,
     SyncModule,

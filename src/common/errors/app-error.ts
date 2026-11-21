@@ -39,6 +39,39 @@ export const Errors = {
       HttpStatus.FORBIDDEN,
       'Tài khoản đã bị khóa',
     ),
+  // ----- Đăng nhập / đăng ký (ngày 8) -----
+  invalidCredentials: () =>
+    new AppError(
+      'INVALID_CREDENTIALS',
+      HttpStatus.UNAUTHORIZED,
+      'Email hoặc mật khẩu không đúng',
+    ),
+  emailTaken: () =>
+    new AppError('EMAIL_TAKEN', HttpStatus.CONFLICT, 'Email đã được sử dụng'),
+  notAdmin: () =>
+    new AppError(
+      'NOT_ADMIN',
+      HttpStatus.FORBIDDEN,
+      'Tài khoản không có quyền quản trị',
+    ),
+  refreshInvalid: () =>
+    new AppError(
+      'REFRESH_INVALID',
+      HttpStatus.UNAUTHORIZED,
+      'Phiên đăng nhập không hợp lệ, vui lòng đăng nhập lại',
+    ),
+  refreshReused: () =>
+    new AppError(
+      'REFRESH_REUSED',
+      HttpStatus.UNAUTHORIZED,
+      'Phát hiện phiên đăng nhập bất thường. Tất cả thiết bị đã bị đăng xuất',
+    ),
+  wrongPassword: () =>
+    new AppError(
+      'WRONG_PASSWORD',
+      HttpStatus.UNPROCESSABLE_ENTITY,
+      'Mật khẩu không đúng',
+    ),
   forbidden: () =>
     new AppError(
       'FORBIDDEN',

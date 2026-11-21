@@ -1,13 +1,11 @@
 import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
-import { User, UserSchema } from './user.schema';
+import { UsersController } from './users.controller';
+import { UsersService } from './users.service';
 
-// Hôm nay mới có schema. Ngày 8 thêm service + controller (users/me).
+// Model User, Session và AuthService lấy từ AuthModule (đánh dấu @Global)
+// nên ở đây không cần import gì thêm.
 @Module({
-  imports: [
-    MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
-  ],
-  // export để JwtAuthGuard (ở AppModule) và AuthModule dùng được model User
-  exports: [MongooseModule],
+  controllers: [UsersController],
+  providers: [UsersService],
 })
 export class UsersModule {}

@@ -8,6 +8,8 @@ export interface AppConfig {
   refreshTtlDays: number;
   adminOrigins: string[];
   minAppVersion: string;
+  adminEmail?: string;
+  adminPassword?: string;
 }
 
 // Gom biến môi trường thành một object, dùng qua configService.get('app.port')...
@@ -26,5 +28,7 @@ export default (): { app: AppConfig } => ({
       .map((s) => s.trim())
       .filter(Boolean),
     minAppVersion: process.env.MIN_APP_VERSION ?? '1.0.0',
+    adminEmail: process.env.ADMIN_EMAIL || undefined, // chuỗi rỗng coi như không đặt
+    adminPassword: process.env.ADMIN_PASSWORD || undefined,
   },
 });

@@ -31,3 +31,17 @@ export const CurrentUser = createParamDecorator(
   (_data: unknown, ctx: ExecutionContext): AuthUser =>
     ctx.switchToHttp().getRequest().user,
 );
+
+// ----- @DeviceId() -----
+// Đọc header "X-Device-Id" (id của máy đang gọi API, app tự tạo lúc cài).
+export const DeviceId = createParamDecorator(
+  (_data: unknown, ctx: ExecutionContext): string | undefined =>
+    ctx.switchToHttp().getRequest().headers['x-device-id'],
+);
+
+// ----- @ClientKind() -----
+// Đọc header "X-Client": 'app' (Flutter) hoặc 'admin' (trang quản trị).
+export const ClientKind = createParamDecorator(
+  (_data: unknown, ctx: ExecutionContext): string | undefined =>
+    ctx.switchToHttp().getRequest().headers['x-client'],
+);
