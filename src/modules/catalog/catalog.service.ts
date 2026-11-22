@@ -36,8 +36,6 @@ export class CatalogService {
     private config: ConfigService,
   ) {}
 
-  // ----- Phiên bản dữ liệu (dùng cho sync) -----
-
   // Thông tin để app biết có cần tải dữ liệu mới không
   async getManifest() {
     const state = await this.stateModel.findById('catalog').lean();
