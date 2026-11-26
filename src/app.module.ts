@@ -14,7 +14,7 @@ import { CatalogModule } from './modules/catalog/catalog.module';
 import { HealthController } from './modules/health/health.controller';
 import { SyncModule } from './modules/sync/sync.module';
 import { UsersModule } from './modules/users/users.module';
-
+import { AdminModule } from './modules/admin/admin.module';
 @Module({
   imports: [
     // đọc file .env, kiểm tra biến, dùng được ở mọi module
@@ -45,6 +45,7 @@ import { UsersModule } from './modules/users/users.module';
     UsersModule,
     CatalogModule,
     SyncModule,
+    AdminModule,
   ],
   controllers: [HealthController],
   providers: [
